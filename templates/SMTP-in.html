@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ch">
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <title>邮件炸弹</title>
+        <style type="text/css">
+            body {
+            	background-image: url();
+            	background-repeat: no-repeat;
+            	background-color: #9C6;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="response.html" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="in" align="center">
+                <h2>SMTP 邮件伪造和邮件炸弹</h2>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <label>发件邮箱:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="mail_from" placeholder="xxx@xxx.xxx 或 @xxx.xxx (随机生成前缀)" size="36"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>收件邮箱:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="mail_to" placeholder="xxx@xxx.xxx 后缀不能与发件邮箱相同" size="36"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>发件人　:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="sender" placeholder="可以不填" size="18"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>收件人　:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="recipient" placeholder="可以不填" size="18"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>邮件标题:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="subject" placeholder="可以不填" size="18"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>正　　文:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <textarea name="text" placeholder="可以不填" rows="8" cols="67"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <label>添加附件:</label>
+                            <input type="file" name="file" class="upload"></input>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>发件数　:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="send_num" value="1" size="5"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>反过滤　:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name=round value="True">开启</input>
+                            <input type="radio" name=round value="False" checked="checked">关闭</input>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="发　送" onclick="submit"></input>
+            </div>
+        </form>
+    </body>
+</html>
