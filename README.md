@@ -14,10 +14,13 @@
 * dnspython
 
 ## 使用
+### 将文件夹命名为SMTP-fork
+
 ### 进入文件目录，运行manage.py  
 ```shell
 cd SMTP-fork
 
 python manage.py runserver 0.0.0.0:8080
 ```
+
 ### 用浏览器访问即可，本地访问为 http://127.0.0.1:8080/
