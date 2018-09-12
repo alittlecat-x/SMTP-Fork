@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ch">
+    <head>
+        <meta charset = "utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <title>邮件炸弹</title>
+        <style type="text/css">
+            body {
+            	background-image: url();
+            	background-repeat: no-repeat;
+            	background-color: #9C6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="out" align="center">
+            <h2>SMTP 邮件伪造和邮件炸弹</h2>
+            <textarea name="response" rows="20" cols="120" readonly="readonly">{{response}}</textarea>
+            <form action="/" method="get">{% csrf_token %}
+                <input type="submit" value="返　回" onclick="submit"></input>
+            </form>
+        </div>
+    </body>
+</html>
